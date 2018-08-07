@@ -42,7 +42,7 @@ void PrintList(List L )//打印一个链表
     putchar(10);
 }
 
-Node *Inert(List L,ElementType e)//在尾部插入一个链表
+void Inert(List L,ElementType e)//在尾部插入一个链表
 { 
     List p=L;
     List t;

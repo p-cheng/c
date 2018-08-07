@@ -21,7 +21,9 @@ Stack* InitStack(Stack *s,int Stacksize)//初始化一个栈
     s = (Stack*)malloc(sizeof(Stack));
     s->data= (int *)malloc(Stacksize*sizeof(int));
     s->Stacksize = Stacksize;
+    
     s->top=-1;
+    return s;
 }
 int EmptyStack(Stack *s)//判栈空
 {
@@ -52,7 +54,7 @@ int  PopStack(Stack *s,int *a)//出栈
     }
     else
     {
-        //printf("s->top = %d\n s->data= %d\n",s->top,s->data[s->top]);
+        //printf("sd->top = %d\n s->data= %d\n",s->top,s->data[s->top]);
         *a = s->data[s->top--];
     }
     return 0;
@@ -89,7 +91,7 @@ int main()
 
     int p;
     int Stacksize = 3;
-    s = InitStack(s,Stacksize);
+   s=   InitStack(s,Stacksize);
    /* printf("请输入栈的长度！\n");
     scanf("%d",&Stacksize);
     s = InitStack(s,Stacksize);
